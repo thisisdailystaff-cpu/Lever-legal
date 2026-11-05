@@ -3,90 +3,649 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lever - Privacy Policy</title>
+<meta name="color-scheme" content="light dark">
+<title>Privacy Policy – Lever and Lever Coach</title>
+<meta name="description" content="Privacy Policy of the Lever and Lever Coach apps. Політика конфіденційності застосунків Lever і Lever Coach.">
 <style>
-  body { margin: 0; background: #0B0E13; color: #98A2B3;
-         font: 17px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 48px 22px 80px; }
-  h1 { color: #EEF2F7; font-size: 34px; margin: 0 0 4px; }
-  h2 { color: #EEF2F7; font-size: 21px; margin: 36px 0 10px; }
-  .date { color: #6B7480; font-size: 14px; margin-bottom: 28px; }
-  .lead { color: #EEF2F7; }
-  a { color: #C6FA3E; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  ul { padding-left: 22px; }
-  li { margin: 6px 0; }
+  :root {
+    --bg: #ffffff;
+    --fg: #1b1f24;
+    --muted: #5b6470;
+    --line: #dfe3e8;
+    --card: #f5f7f9;
+    --accent: #1f5fd1;
+    --ph-bg: #fff2b3;
+    --ph-fg: #5a4600;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1216;
+      --fg: #e6e9ed;
+      --muted: #9aa4b0;
+      --line: #2a3038;
+      --card: #171b21;
+      --accent: #7aa7ff;
+      --ph-bg: #4a3d00;
+      --ph-fg: #ffe9a0;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1216;
+    --fg: #e6e9ed;
+    --muted: #9aa4b0;
+    --line: #2a3038;
+    --card: #171b21;
+    --accent: #7aa7ff;
+    --ph-bg: #4a3d00;
+    --ph-fg: #ffe9a0;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+  .bar { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+  .switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .switch button {
+    appearance: none; border: 0; background: transparent; color: var(--fg);
+    font: inherit; font-size: 14px; padding: 6px 16px; cursor: pointer;
+  }
+  .switch button[aria-pressed="true"] { background: var(--accent); color: var(--bg); font-weight: 600; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 8px 0 4px; }
+  h2 { font-size: 20px; line-height: 1.3; margin: 36px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 22px 0 6px; }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+  .jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 8px; padding: 0; list-style: none; }
+  .jump a {
+    display: inline-block; padding: 6px 14px; border: 1px solid var(--line);
+    border-radius: 999px; text-decoration: none; font-size: 14px;
+  }
+  .box { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin: 16px 0; }
+  .box p:first-child, .box ul:first-child { margin-top: 0; }
+  .box p:last-child, .box ul:last-child { margin-bottom: 0; }
+  .ph { background: var(--ph-bg); color: var(--ph-fg); padding: 0 4px; border-radius: 4px; overflow-wrap: anywhere; }
+  .tag { font-size: 12px; font-weight: 600; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 6px; margin-left: 6px; vertical-align: 1px; }
+  .tbl { overflow-x: auto; margin: 12px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 1.45; }
+  th, td { border: 1px solid var(--line); padding: 6px 8px; vertical-align: top; text-align: left; min-width: 120px; }
+  th { background: var(--card); }
+  /* Language: with JS one language is shown; without JS both are shown, English first. */
+  html[data-lang="en"] .lang[lang="uk"] { display: none; }
+  html[data-lang="uk"] .lang[lang="en"] { display: none; }
+  .lang + .lang { margin-top: 56px; padding-top: 24px; border-top: 4px double var(--line); }
+  html[data-lang] .lang + .lang { margin-top: 0; padding-top: 0; border-top: 0; }
+  :target { scroll-margin-top: 12px; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Lever &mdash; Privacy Policy</h1>
-  <div class="date">Effective date: July 20, 2026</div>
+<div class="wrap">
 
-  <p>Lever ("the app") is developed and published by an independent developer ("we", "us").
-  This policy explains what data the app handles. The short version:
-  <span class="lead"><strong>your training data stays on your device</strong></span> &mdash;
-  the only data that leaves it is pseudonymous usage analytics described below.</p>
+  <div class="bar" aria-label="Language / Мова">
+    <div class="switch" role="group">
+      <button type="button" data-set="en" aria-pressed="false">English</button>
+      <button type="button" data-set="uk" aria-pressed="false">Українська</button>
+    </div>
+  </div>
 
-  <h2>No accounts</h2>
-  <p>Lever does not require an account, sign-up, or login. We do not ask for or collect
-  your name, email address, or contact details. The app shows no third-party ads, and we
-  do not sell your data.</p>
+  <!-- ============================================================ ENGLISH -->
+  <div class="lang" lang="en">
 
-  <h2>Data stored on your device</h2>
-  <p>Your training content lives locally on your phone and is not sent to us:</p>
-  <ul>
-    <li>your quiz answers (training experience, schedule, goal)</li>
-    <li>your training program, workouts, and set-by-set logs</li>
-    <li>settings (units, theme, rest-timer preferences)</li>
-  </ul>
-  <p>This data is deleted when you uninstall the app or clear its storage. You can also
-  export your training data from the app (Settings) &mdash; the export is a local file
-  that you control.</p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Lever and Lever Coach · Version 2.0 · Effective 8 November 2026 · Replaces the version of 22 October 2026</p>
+    <p class="meta">This policy is published in English and Ukrainian. If the two versions differ, the English version applies.</p>
 
-  <h2>Usage analytics (Amplitude)</h2>
-  <p>To understand how the app is used and improve it, the app sends usage events to
-  Amplitude, Inc., a third-party analytics provider. This includes things like which
-  screens are opened and which features are used, together with technical information:
-  device model, operating system version, app version, language/region, and a randomly
-  generated identifier.</p>
-  <p>This analytics data is pseudonymous: it does not include your name or contact
-  details, and it does not include the content of your training data (your programs,
-  workouts, and logs are not sent). Amplitude processes this data on our behalf and may
-  store it on servers outside your country; see the
-  <a href="https://amplitude.com/privacy">Amplitude Privacy Notice</a>. We use analytics
-  solely to improve the app &mdash; not for advertising, and we do not sell this data.</p>
+    <ul class="jump">
+      <li><a href="#lever">Lever</a></li>
+      <li><a href="#coach">Lever Coach</a></li>
+      <li><a href="#s4">Health answers</a></li>
+      <li><a href="#s6">Statistics and crash reports</a></li>
+      <li><a href="#s7">Purposes and retention</a></li>
+      <li><a href="#s11">Deleting your data</a></li>
+    </ul>
 
-  <h2>Purchases</h2>
-  <p>Paid features are sold through Google Play Billing. Payments are processed entirely
-  by Google; we never see or store your payment details. Google's processing of your
-  payment data is covered by the
-  <a href="https://play.google.com/about/play-terms/">Google Play Terms of Service</a> and
-  <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The app only
-  receives a confirmation of your purchase (entitlement) to unlock features.</p>
+    <div class="box">
+      <p><strong>In short</strong></p>
+      <ul>
+        <li>Lever works without an account and offline. You sign in only if you want a backup, or to work with a coach.</li>
+        <li>Lever Coach needs an account.</li>
+        <li>A coach sees your training only after you agree on a separate screen. You can stop sharing at any time.</li>
+        <li>Health answers (injuries, heart condition, pregnancy, pain) are optional and used only with your separate consent. They stay on your phone (or, on iPhone, in your own iCloud backup) unless you sign in, and never go to a coach or to analytics.</li>
+        <li>The apps send usage statistics (and, in Lever for Android, crash reports) to Amplitude and Google Firebase, without your name, e-mail or account ID. You can object by writing to us.</li>
+        <li>Lever builds your program with rules written by people. There is no machine-learning model, and your data is never sent to an AI service.</li>
+        <li>We show no ads, do not sell data, and do not track you across other companies' apps or websites.</li>
+        <li>You can delete your account inside the app or by e-mail (<a href="#s11">section 11</a>).</li>
+      </ul>
+    </div>
 
-  <h2>Notifications</h2>
-  <p>The app can show local notifications (for example, when a rest timer finishes). The
-  notification permission is optional, and notifications are generated on your device
-  &mdash; no data is sent anywhere.</p>
+    <h2 id="s1">1. Who we are</h2>
+    <p>Lever and Lever Coach (together, "the apps") are published by Mykhailo Stepanchuk ("we", "us"), 4 Itskhaka Rabina St., Odesa 65076, Ukraine.</p>
+    <p>We are the data controller: we decide why and how the data described in this policy is used. Exceptions: what a coach enters about their own clients (<a href="#s10">section 10</a>), and what Apple and Google handle under their own policies (<a href="#s8">section 8</a>).</p>
+    <p>Contact for anything in this policy: <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. We have not appointed a data protection officer; write to this address instead.</p>
+    <p>We are based in Ukraine. Ukrainian data protection law applies to us, and so do the EU GDPR and the UK GDPR, because the apps are offered to people in the EU and the UK.</p>
 
-  <h2>Your rights (GDPR, CCPA, and similar laws)</h2>
-  <p>Your training data is under your direct control on your device &mdash; we cannot
-  access it. For analytics data, you can request access to or deletion of the data
-  associated with your device's analytics identifier: contact us at the email below and
-  we will process the request, including forwarding the deletion to Amplitude. We do not
-  sell personal data within the meaning of the CCPA.</p>
+    <h2 id="s2">2. The two apps, and what you must give us</h2>
+    <ul>
+      <li><strong>Lever</strong> is a training app for people. It works fully offline with no account. Signing in is optional: you need it only for a cloud backup, to restore your data on another phone, or to link to a coach.</li>
+      <li><strong>Lever Coach</strong> is the app for coaches: schedule, bookings, workouts, clients. It needs an account.</li>
+    </ul>
+    <p>One account is either a coach account or a client account, never both.</p>
+    <p>You never have to give us more than a feature needs. Without an account you can still train. Without health answers Lever still builds a program, just without adjusting it for injuries.</p>
 
-  <h2>Children</h2>
-  <p>The app is not directed at children under 13.</p>
+    <h2 id="s3">3. Data we handle</h2>
 
-  <h2>Changes to this policy</h2>
-  <p>If the app changes how it handles data (for example, if we add optional cloud
-  backup), we will update this policy and change the effective date above before the
-  change ships.</p>
+    <h3>3.1 In both apps</h3>
+    <p><strong>With or without an account:</strong> your IP address, the time and the address of each request appear in the server logs of our database provider whenever the app talks to our server. When you enter a coach code, we also count attempts per IP address, to stop guessing.</p>
+    <p><strong>When you have an account:</strong></p>
+    <ul>
+      <li><strong>Account:</strong> e-mail address, name, and your user ID from Google or Apple. Sign in with Apple is available on iOS only. Apple can give us a private relay e-mail address instead of your real one, and gives your name only the first time you sign in. Google also shares a link to your profile picture.</li>
+      <li><strong>Role:</strong> whether your account is a coach account or a client account.</li>
+      <li><strong>Settings stored with the account:</strong> language, units (kg or lb), time zone, how long before a session you want a reminder.</li>
+      <li><strong>Devices and notifications:</strong> a random device ID, the platform (iOS or Android), which app it is, the push notification token (a key for delivering notifications to your phone), when the device was last seen, and which kinds of notifications you turned off. For each notification we keep its type, the other person's name, the date, the time and the workout name. Never weights or body data.</li>
+      <li><strong>Purchases:</strong> see <a href="#s8">section 8</a> (RevenueCat, App Store, Google Play). We never see your card or payment details.</li>
+    </ul>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy: <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a></p>
-</main>
+    <h3 id="lever">3.2 Lever<span class="tag">Lever</span></h3>
+    <p><strong>Without an account.</strong> Your training data stays on your phone: quiz answers (experience, schedule, goal), your program, workouts, set-by-set logs, settings, and, only if you agree, health answers (<a href="#s4">section 4</a>). We cannot see it. Deleting the app or clearing its storage removes it. Only three things leave the phone without an account: purchases go to RevenueCat with a random ID (<a href="#s8">section 8</a>); usage statistics (and, on Android, crash reports) (<a href="#s6">section 6</a>); and when you enter a coach code, our server sees your IP address.</p>
+    <p><strong>If you sign in (optional).</strong> These are copied to our cloud database so you can restore them on another phone:</p>
+    <ul>
+      <li>your training program and where you are in it;</li>
+      <li>the working weights the app has learned for each exercise;</li>
+      <li>custom workouts you built;</li>
+      <li>completed workout logs: exercises, sets, reps, weights, times, rest;</li>
+      <li>your profile and quiz answers: handle, gender, age, body weight, height, goal, schedule, equipment, experience; and your streak (workouts in a row) and calendar state;</li>
+      <li>health answers, only if you gave the separate consent in <a href="#s4">section 4</a>;</li>
+    </ul>
+    <p>Theme, language and units stay on each device. A workout in progress is uploaded when you finish it, or in real time while a coach runs the same workout with you.</p>
+    <p><strong>If you link to a coach.</strong> Your coach sees training data as described in <a href="#s9">section 9</a>, and we store the booking data (requests, times, status, your attendance answers) and the "sessions left" count your coach keeps.</p>
+    <p><strong>Usage statistics and crash reports.</strong> See <a href="#s6">section 6</a>.</p>
+    <p><strong>Notifications.</strong> Timers and reminders in Lever are created on your phone. If you are linked to a coach, we also send push notifications about bookings, attendance questions and assigned workouts. You control them with the notification permission on your phone.</p>
+
+    <h3 id="coach">3.3 Lever Coach<span class="tag">Lever Coach</span></h3>
+    <p>An account is required. Besides <a href="#s3">section 3.1</a>, Lever Coach stores:</p>
+    <ul>
+      <li><strong>Coach settings:</strong> time zone, session length, how far ahead clients can book, the deadline until which a session can be cancelled, the late-cancellation setting.</li>
+      <li><strong>Schedule:</strong> working days and hours, breaks, open time slots.</li>
+      <li><strong>Clients and bookings:</strong> who is linked to you, link status, the invite codes you create, bookings (time, status, who cancelled), attendance answers from clients.</li>
+      <li><strong>Sessions left:</strong> a count per client that you keep, every change to it (date, who, reason), and your private notes. The client sees the count, never the notes.</li>
+      <li><strong>Session price:</strong> an optional price per session, in any currency. Only you see it.</li>
+      <li><strong>Workouts and programs</strong> you build, notes on them (they can contain links to videos), templates, assignments to clients (dates, status) and weights you set for a client.</li>
+      <li><strong>Training data of linked clients</strong> that clients agreed to share (<a href="#s9">section 9</a>).</li>
+      <li><strong>Manual clients:</strong> the name and e-mail you type in (<a href="#s10">section 10</a>).</li>
+      <li><strong>Subscription:</strong> your plan (number of seats), valid-until date and your RevenueCat customer ID. A seat is a client with an assigned workout or a booked session in the last 30 days; we count them to apply your plan limit.</li>
+    </ul>
+    <p>Lever Coach asks no health questions and shows no ads. It sends usage statistics to Amplitude (<a href="#s6">section 6</a>). Lever Coach has no crash-reporting library.</p>
+
+    <h2 id="s4">4. Health answers</h2>
+    <p>This section applies to Lever only. Lever Coach does not ask about health.</p>
+    <p><strong>What.</strong> Answers about injuries and medical conditions: joint pain, a heart condition, pregnancy; and any pain you report after a workout. Under the GDPR these are "special category" data (Article 9).</p>
+    <p><strong>Why.</strong> Only to adjust your program: swap exercises and lower loads. Nothing else.</p>
+    <p><strong>How we ask.</strong> Lever first shows a one-time notice that it is not a medical service. It then asks an optional question: may your injury and medical answers and any pain you report after a workout be used to adjust your program? If you say no, those answers are deleted and the program is built without them. If you say yes, they are saved. The legal basis is your explicit consent (Article 6(1)(a) and Article 9(2)(a) GDPR).</p>
+    <p><strong>Where they are kept.</strong> On your phone, in the app's private storage. They go to our cloud database (Supabase, Ireland) only if you are also signed in. In Lever for Android, backup of the app's data is turned off, so the answers are not in your Google backup. On iPhone, if you turned on iCloud backup, the app's data, including the answers, is in that backup; it is kept in your Apple account and we cannot read it.</p>
+    <p><strong>Who never gets them.</strong> Your coach, Amplitude, Google Firebase, RevenueCat, Google and anyone else. Two exceptions: Supabase stores them for us when you are signed in, and Apple holds your iCloud backup if you turned it on. They are never part of usage statistics or crash reports, and never used for advertising or any other purpose.</p>
+    <p><strong>Withdrawing consent.</strong> Turn the health consent off in Lever's settings at any time. From then on Lever stops using the answers. Answers already saved are deleted when you delete your account, or within 30 days of your request to <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. Without an account, clearing the app's data deletes them.</p>
+    <p><strong>How long.</strong> Until you delete your account or ask us to delete them. Without an account: until you clear the app's data.</p>
+    <p>If you live in the United States, our <a href="consumer-health-data.html">Consumer Health Data Privacy Policy</a> also applies.</p>
+
+    <h2 id="s5">5. How Lever builds your program</h2>
+    <p>Lever's program engine is a set of rules written by people: linear progression, planned deload weeks and staged progressions between exercise variants. It uses your quiz answers, your logged sets and, only if you consented, your health answers.</p>
+    <p>There is no machine-learning model and no generative AI inside Lever. Your data is not sent to any AI service and is not used to train any model. The engine only suggests exercises and weights; you can change every suggestion. It makes no decision with legal or similarly significant effects on you (Article 22 GDPR).</p>
+    <p>In Lever Coach, workouts and programs are written by the coach.</p>
+
+    <h2 id="s6">6. Usage statistics and crash reports</h2>
+    <p><strong>Which apps.</strong> Lever (Android and iOS) and Lever Coach (Android and iOS) send usage statistics to Amplitude, in the versions published in the stores. Lever for Android also uses Google Firebase Analytics for usage statistics and Firebase Crashlytics for crash reports. Lever for iOS and Lever Coach have no crash-reporting library.</p>
+    <p><strong>Why.</strong> To see which screens and features are used, where people stop or run into errors, how many people start and keep a subscription, and how long workouts are, so that we can fix and improve the apps. Never for advertising; never shared with advertisers or data brokers; never combined with data from other companies.</p>
+    <p><strong>Legal basis.</strong> Our legitimate interest (Article 6(1)(f) GDPR): understanding which screens and features are used, finding errors and crashes, and improving the apps. There is no switch for this in the apps. You can object at any time (Article 21 GDPR): write to <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>, and we will ask Amplitude and Google to delete everything tied to your device ID. Deleting the app also stops the collection.</p>
+    <p><strong>What goes to Amplitude:</strong></p>
+    <ul>
+      <li>usage events: which screens you open and which features you use, with counts and types of actions;</li>
+      <li>a device ID. On iPhone this is Apple's identifier for vendor (IDFV): it is the same in Lever and Lever Coach on one iPhone, and it is not an advertising identifier. On Android, Amplitude creates a random ID when the app is installed. Neither is your account ID; we do not send Amplitude your account ID;</li>
+      <li>your IP address. Amplitude uses it to work out your country and city, and stores it with the events; your mobile carrier and the device manufacturer;</li>
+      <li>device model, operating system version, app version, app language;</li>
+      <li>purchase events: product ID, plan and currency; in Lever also the price you paid, in Lever Coach without amounts;</li>
+      <li>training counts: the number of sets and the length of a session, without weights.</li>
+    </ul>
+    <p><strong>What goes to Firebase (Lever for Android):</strong> the same kind of usage events with device and app information and a Firebase app-instance ID; for a crash, what the app was doing when it crashed, the device model, operating system version, app version and a Firebase installation ID. Firebase does not receive the advertising ID of your Android device: its collection is turned off in the app.</p>
+    <p><strong>What never goes to any of them:</strong> your name, e-mail address, account ID, weights, body measurements, health answers, free text (notes, client names), and any data of a coach's clients.</p>
+    <p>Statistics are not linked to your account: we never send your account ID, name or e-mail. They are still personal data, because they are tied to a device ID and an IP address.</p>
+    <p><strong>Deleting it.</strong> Because statistics are not linked to your account, deleting your account does not delete them. To erase them, write to us with your device ID, if you know it; otherwise tell us the app, your phone model, the app language and roughly when you installed the app, and we will look for the matching records and ask Amplitude and Google to delete them.</p>
+    <p><strong>How long.</strong> Amplitude: until we delete them; Amplitude does not delete them automatically. Firebase Analytics: 2 months. Firebase Crashlytics: 90 days.</p>
+    <p><strong>Apple diagnostics.</strong> If you chose to share diagnostics with app developers in your iPhone settings, Apple gives us aggregated crash and usage statistics under Apple's own policy.</p>
+
+    <h2 id="s7">7. Why we use the data, on what basis, and for how long</h2>
+    <p>Articles in the table refer to the GDPR. "Contract" means the data is needed to provide the app to you (Article 6(1)(b)).</p>
+    <div class="tbl">
+    <table>
+      <thead>
+        <tr><th>Purpose</th><th>Data</th><th>Legal basis</th><th>How long</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sign-in and account (both apps)</td><td>e-mail, name, Google or Apple user ID, profile picture link (Google), role, account settings</td><td>Contract</td><td>Until you delete the account</td></tr>
+        <tr><td>Backup and restore of your training (Lever, signed in)</td><td>program, working weights, custom workouts, logs, profile and quiz answers, streak and calendar</td><td>Contract</td><td>Until you delete the account</td></tr>
+        <tr><td>Adjusting your program for injuries and health (Lever)</td><td>health answers, pain reports</td><td>Explicit consent, Article 6(1)(a) and Article 9(2)(a)</td><td>Until you delete the account or ask us to delete them. Without an account: until you clear the app's data</td></tr>
+        <tr><td>Working with a coach (both apps)</td><td>link status, invite codes, bookings, attendance answers, sessions-left count, training data shared with the coach, live sets</td><td>Consent to share training data, Article 6(1)(a); contract for bookings</td><td>Shared training data: until you unlink or delete the account. The coach's own session records: until the coach removes the client, the client deletes their account (<a href="#s11">section 11</a>), or the coach deletes the coach account</td></tr>
+        <tr><td>Running the coach's work (Lever Coach)</td><td>schedule, coach settings, workouts, programs, templates, assignments, private notes, session prices, manual clients</td><td>Contract with the coach, Article 6(1)(b). For what the coach writes about clients we act as the coach's processor (<a href="#s10">section 10</a>)</td><td>Until the coach deletes it or deletes the account</td></tr>
+        <tr><td>Offering you a coach's invitation (manual clients)</td><td>the name and e-mail address a coach typed in for you</td><td>Legitimate interest, Article 6(1)(f): letting you accept or refuse the coach's invitation when you sign in with that e-mail address</td><td>Until the coach removes you or deletes the coach account</td></tr>
+        <tr><td>Reminders and notifications (both apps)</td><td>device ID, platform, push token, last-seen time, notification settings, notification records (type, name, date, time, workout name)</td><td>Contract, Article 6(1)(b): notifications about bookings and workouts are part of the service. You decide whether they appear with the notification permission on your phone</td><td>Push token: until you sign out on that device, delete the account, or the delivery service reports the token as invalid. Notification records: until you delete the account</td></tr>
+        <tr><td>Subscriptions (both apps)</td><td>Our record (Lever Coach): plan, valid-until date, RevenueCat customer ID. At RevenueCat: purchase status, product, store receipt data, app user ID (<a href="#s8">section 8</a>)</td><td>Contract. The stores keep their own tax records under the law</td><td>Our record (Lever Coach): until you delete the account. Lever: we keep no record; RevenueCat holds it. RevenueCat: until you ask us to delete your record. Apple and Google: under their own rules</td></tr>
+        <tr><td>Usage statistics (both apps)</td><td><a href="#s6">section 6</a></td><td>Legitimate interest, Article 6(1)(f): understanding which screens and features are used, finding errors and improving the apps. You can object (<a href="#s12">section 12</a>)</td><td>Amplitude: until we delete them; Amplitude does not delete them automatically. Firebase Analytics: 2 months</td></tr>
+        <tr><td>Crash reports (Lever for Android)</td><td><a href="#s6">section 6</a></td><td>Legitimate interest, Article 6(1)(f): finding and fixing crashes. You can object (<a href="#s12">section 12</a>)</td><td>90 days</td></tr>
+        <tr><td>Security and preventing abuse (both apps)</td><td>IP address, time and address of each request in server logs; count of coach-code attempts per IP address</td><td>Legitimate interest, Article 6(1)(f): keeping the service running and stopping guessing of coach codes and overload. You can object (<a href="#s12">section 12</a>)</td><td>Server logs: 1 day. Code-attempt counters: 1 day</td></tr>
+        <tr><td>Answering your requests</td><td>your message, your e-mail address, what we did</td><td>Answering: legal obligation, Article 6(1)(c) and Articles 12–22. Keeping the record afterwards: legitimate interest in being able to show how we handled your request, Article 6(1)(f)</td><td>12 months after the request is closed</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>We do not use your data for advertising, we do not sell it, and we do not use it for decisions that have legal effects on you.</p>
+
+    <h2 id="s8">8. Who processes the data for us, and where</h2>
+    <p>Supabase, Amplitude, RevenueCat and Google (for Firebase) process data on our behalf, under contracts that oblige them to protect it at least as well as this policy describes and to use it only for the service they provide to us. Apple and Google act under their own privacy policies, as independent controllers, for sign-in with your Apple or Google account and for purchases.</p>
+    <ul>
+      <li><strong>Supabase, Inc.</strong> hosts the database, sign-in and real-time updates. All account and app data in sections <a href="#s3">3</a>, <a href="#s4">4</a>, <a href="#s9">9</a> and <a href="#s10">10</a> is stored in Ireland (EU, AWS eu-west-1). Supabase is a US company; any processing outside the EU is covered by the European Commission's standard contractual clauses in our data processing agreement with Supabase.</li>
+      <li><strong>Google LLC</strong> (United States) provides Google Sign-In, Firebase Cloud Messaging (push delivery to Android and iOS: token, notification type, names, date, time, workout name), and, in Lever for Android, Firebase Analytics and Firebase Crashlytics (<a href="#s6">section 6</a>). Google LLC is certified under the EU-U.S. Data Privacy Framework and its UK extension.</li>
+      <li><strong>Apple</strong> provides Sign in with Apple, the App Store and push delivery on iOS. Apple processes this data under its own privacy policy.</li>
+      <li><strong>Amplitude, Inc.</strong> (United States) receives usage statistics from all four apps (<a href="#s6">section 6</a>). Amplitude is certified under the EU-U.S. Data Privacy Framework and its UK extension.</li>
+      <li><strong>RevenueCat, Inc.</strong> (United States) manages subscriptions. It receives your purchase status, the product, receipt data from the App Store or Google Play and an app user ID. When you are signed in, that ID is your account ID; otherwise it is a random ID. Data is stored on Amazon Web Services in the United States; the transfer is covered by the European Commission's standard contractual clauses and the UK International Data Transfer Addendum in our data processing agreement with RevenueCat.</li>
+      <li><strong>Google Play and the App Store</strong> handle payments. We receive only your subscription status, never your card details.</li>
+    </ul>
+    <p>We ourselves work from Ukraine, which has no EU adequacy decision. The data stays stored in Ireland; we access it from Ukraine only to run and repair the service and to answer your requests, and the GDPR binds us for that access as the controller (Article 3(2)).</p>
+    <p>You can ask us for a copy of the transfer safeguards at <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. For the UK, transfers rely on the UK extension of the Data Privacy Framework or the UK addendum to the standard contractual clauses. If the Data Privacy Framework stops applying, transfers to Google and Amplitude continue under the standard contractual clauses in our agreements with them.</p>
+    <p>Apart from the providers above and your own coach or client (<a href="#s9">section 9</a>), we disclose data to others only if the law requires it. If we ever sell or merge the business, this policy will continue to apply to the data.</p>
+
+    <h2 id="s9">9. What a coach sees, and what a client sees</h2>
+    <h3>9.1 A coach sees about a linked client</h3>
+    <p>Only after the client taps "Share with coach" on a separate screen that lists this:</p>
+    <ul>
+      <li>the client's name (if the account has no name, the part of the e-mail before the @; not for Apple private relay addresses);</li>
+      <li>workouts and program;</li>
+      <li>every logged workout: date, length, exercises, sets, reps, weights, rest times, and records;</li>
+      <li>bookings, attendance and attendance answers, the sessions-left count;</li>
+      <li>when the coach runs a workout together with the client, the sets both of them enter, in real time.</li>
+    </ul>
+    <p>A coach does <strong>not</strong> see the client's e-mail address (except a manual client's e-mail the coach typed in), body weight, height, age, goal, health and injury answers, pain reports, streaks, or anything about other coaches.</p>
+    <h3>9.2 A client sees about the coach</h3>
+    <ul>
+      <li>the coach's name, open time, the client's own bookings and assigned workouts, the sessions-left count, and reminders;</li>
+      <li>never the coach's prices, private notes or other clients.</li>
+    </ul>
+    <h3>9.3 Stopping</h3>
+    <p>A client can unlink at any time (Lever: You tab, coach card). A coach can end a link too. It takes effect at once on our server: the coach can no longer read any training data of that client. Future sessions between the two are cancelled and not deducted from the sessions-left count. The coach's workouts and assignments are removed from the client's Lever; the client keeps their own history. Linking again needs a new agreement on the consent screen.</p>
+    <p>What stays in the coach's account after unlinking is the coach's own record of sessions with that client: dates, times, status, the sessions-left count and its change history, the coach's notes and prices. The coach does not keep access to the client's training data.</p>
+
+    <h2 id="s10">10. Manual clients and what coaches enter</h2>
+    <p>A coach can add a person who does not use Lever yet, by typing a name and an e-mail address. We store them in the coach's account and create an empty placeholder that cannot sign in. We do not send that person any message, push notification or attendance check. If the person later signs in to Lever with a verified e-mail that matches, Lever offers the link on the usual consent screen. Nothing is shared until the person agrees, and then the earlier sessions and the sessions-left count are merged into their account.</p>
+    <p><strong>If a coach added you.</strong> A coach can add you by typing your name and e-mail address. For this, and for the notes, prices and session counts the coach keeps about you, the coach is responsible (controller), and we store it only on the coach's instructions (processor, Article 28 GDPR). The coach got this information from you and must tell you about it. We use your e-mail address for one purpose of our own: if you sign in to Lever with that verified address, we offer you the link on the consent screen (legitimate interest, Article 6(1)(f): letting you accept or refuse the coach's invitation). We send you nothing before that. The record stays until the coach removes you or deletes their account. To see, correct or delete it, ask the coach, or write to us at <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>; we will pass the request to the coach and help carry it out.</p>
+
+    <h2 id="s11">11. Deleting your account and your data</h2>
+    <p>We keep account data while the account exists (exact periods in <a href="#s7">section 7</a>). Without an account, data lives only on your phone.</p>
+    <p><strong>Delete in the app.</strong> Lever: Settings, Delete account. Lever Coach: Profile, Delete account. There are two confirmation screens: what will be deleted, then typing a confirmation word. You need an internet connection. Deletion is permanent and we cannot undo it.</p>
+    <p><strong>Delete without the app.</strong> Send an e-mail to <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a> from the e-mail address of your account, with the subject "Delete my Lever account" or "Delete my Lever Coach account". You do not need to install the app again. If you write from another address, we will ask you to confirm that the account is yours. We delete the account and its data within 30 days and reply when it is done.</p>
+    <p><strong>What is deleted:</strong> your profile and sign-in record, workouts, programs, logs and sets, health answers, settings, devices and push tokens, notification records, bookings and sessions-left records with coaches or clients, and the link itself. For a coach also: the schedule, invite codes, session prices, manual-client records and our subscription record. </p>
+    <p><strong>Effect on the other person.</strong> If a client deletes their account, the coach loses that client's training data, bookings and sessions-left records. If a coach deletes their account, clients keep their own training history, while the coach's workouts, assignments and bookings disappear from their app.</p>
+    <p><strong>Sign in with Apple.</strong> When you delete an account created with Apple, we ask Apple to revoke the connection with this app.</p>
+    <p><strong>What is not deleted by us:</strong></p>
+    <ul>
+      <li>purchase and tax records that Apple and Google keep under their own policies and the law. Your customer record at RevenueCat: write to us and we will delete it;</li>
+      <li>usage statistics and crash reports, because they are not linked to your account. How to delete them: <a href="#s6">section 6</a>;</li>
+      <li>server logs, after the period in <a href="#s7">section 7</a>. We do not keep database backups.</li>
+    </ul>
+
+    <h2 id="s12">12. Your rights</h2>
+    <p>Under the GDPR, the UK GDPR and similar laws you have the right to:</p>
+    <ul>
+      <li>get a copy of your data and information about how it is used (access);</li>
+      <li>correct it (many things you can edit in the app; for the rest write to us);</li>
+      <li>have it deleted (<a href="#s11">section 11</a>);</li>
+      <li>limit its use, or object to it where we rely on legitimate interest (<a href="#s7">section 7</a>), including usage statistics and crash reports;</li>
+      <li>receive your data in a common file format (portability);</li>
+      <li>withdraw consent at any time, without affecting what was done before: unlink from your coach, turn off health consent, or delete your account.</li>
+    </ul>
+    <p>You can turn notifications off in your phone settings at any time.</p>
+    <p>Write to <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. We reply within one month. If a request is complex or we receive many, we can extend this by up to two more months; we will tell you within the first month and explain why. If you have an account, we will ask you to confirm from its e-mail address so that nobody else can act on your data.</p>
+    <p>You can also complain to the data protection authority of the country where you live or work (in the EU, for example the Italian Garante per la protezione dei dati personali; in the UK, the Information Commissioner's Office), or in Ukraine to the Ukrainian Parliament Commissioner for Human Rights (<a href="https://ombudsman.gov.ua" rel="noopener">ombudsman.gov.ua</a>).</p>
+
+    <h2 id="s13">13. Children</h2>
+    <p>The apps are for people aged 16 and older, in every country. We do not knowingly collect data from anyone younger. If we learn that a person under 16 has an account, we delete the account and its data within 7 days. If you think a child has an account, write to us.</p>
+
+    <h2 id="s14">14. How the data is protected</h2>
+    <ul>
+      <li>All data between the apps and our servers travels over encrypted connections (HTTPS).</li>
+      <li>Our database checks every request against access rules (row level security). An account can read and change its own data; a coach can also read what a client chose to share; a coach and a client both see the bookings between them. Only we, as administrators, can access the whole database, to run and repair the service.</li>
+      <li>Data on your phone is kept in the app's private storage. In Lever for Android, backup of the app's data is turned off. Health answers leave the phone only if you sign in or, on iPhone, through your own iCloud backup (<a href="#s4">section 4</a>).</li>
+      <li>If a breach of your data happens, we will notify the supervisory authority where the law requires it, and tell you directly if the breach is likely to put you at high risk.</li>
+    </ul>
+
+    <h2 id="s15">15. For residents of the United States</h2>
+    <p>This section adds to the rest of this policy.</p>
+    <ul>
+      <li><strong>Do Not Track.</strong> The apps have no website tracking and no cross-site tracking, so there is nothing for a "Do Not Track" or Global Privacy Control browser signal to switch off. We do not respond to those signals.</li>
+      <li><strong>Third-party tracking.</strong> No third party collects personal information about your activity across other apps or websites through our apps.</li>
+      <li><strong>No sale, no sharing for advertising.</strong> We do not sell personal information and we do not share it for cross-context behavioral advertising, and we have not done so in the past 12 months. We do not use your data for targeted advertising.</li>
+      <li><strong>Nevada.</strong> Nevada residents can ask us not to sell their covered information by writing to <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. We do not sell it in any case.</li>
+      <li><strong>Correcting and deleting your data.</strong> Edit your data in the app, or write to <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. Delete as described in <a href="#s11">section 11</a>.</li>
+      <li><strong>Categories and third parties.</strong> The categories of personal information we collect are listed in <a href="#s3">section 3</a>, and the companies that receive them in <a href="#s8">section 8</a>.</li>
+      <li><strong>Health data.</strong> Our separate <a href="consumer-health-data.html">Consumer Health Data Privacy Policy</a> applies under the Washington My Health My Data Act and Nevada SB 370.</li>
+      <li><strong>Effective date.</strong> At the top of this page.</li>
+    </ul>
+
+    <h2 id="s16">16. Changes to this policy</h2>
+    <p>If we change how the apps handle data, we update this page, its version and its date before the change ships. If we start collecting a new kind of data, use data for a new purpose or add a new recipient, we tell you in the app before it applies, and ask for your consent again where the change concerns health answers. Previous versions are available on request.</p>
+
+    <h2 id="s17">17. Contact</h2>
+    <p>Mykhailo Stepanchuk, 4 Itskhaka Rabina St., Odesa 65076, Ukraine, <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a></p>
+
+  </div>
+
+  <!-- ============================================================ УКРАЇНСЬКА -->
+  <div class="lang" lang="uk">
+
+    <h1>Політика конфіденційності</h1>
+    <p class="meta">Lever і Lever Coach · Версія 2.0 · Чинна з 8 листопада 2026 р. · Замінює версію від 22 жовтня 2026 р.</p>
+    <p class="meta">Політику опубліковано англійською та українською мовами. Якщо ці версії розходяться, діє англійська версія.</p>
+
+    <ul class="jump">
+      <li><a href="#lever-uk">Lever</a></li>
+      <li><a href="#coach-uk">Lever Coach</a></li>
+      <li><a href="#s4-uk">Відповіді про здоров’я</a></li>
+      <li><a href="#s6-uk">Статистика і звіти про збої</a></li>
+      <li><a href="#s7-uk">Цілі та строки</a></li>
+      <li><a href="#s11-uk">Видалення даних</a></li>
+    </ul>
+
+    <div class="box">
+      <p><strong>Коротко</strong></p>
+      <ul>
+        <li>Lever працює без облікового запису і без інтернету. Входити потрібно, лише якщо ви хочете мати резервну копію або працювати з тренером.</li>
+        <li>Для Lever Coach потрібен обліковий запис.</li>
+        <li>Тренер бачить ваші тренування лише після того, як ви погодитеся на окремому екрані. Ви можете припинити доступ будь-коли.</li>
+        <li>Відповіді про здоров’я (травми, хвороби серця, вагітність, біль) необов’язкові й використовуються лише з вашої окремої згоди. Вони залишаються на вашому телефоні (або, на iPhone, у вашій власній резервній копії iCloud), якщо ви не ввійшли в обліковий запис, і ніколи не потрапляють ні до тренера, ні в аналітику.</li>
+        <li>Застосунки надсилають статистику використання (а Lever для Android — ще й звіти про збої) до Amplitude і Google Firebase без вашого імені, електронної пошти та ідентифікатора облікового запису. Ви можете заперечити, написавши нам.</li>
+        <li>Lever складає вашу програму за правилами, які написали люди. Моделі машинного навчання немає, і ваші дані ніколи не надсилаються до сервісів штучного інтелекту (ШІ).</li>
+        <li>Ми не показуємо реклами, не продаємо дані й не відстежуємо вас у застосунках і на сайтах інших компаній.</li>
+        <li>Видалити обліковий запис можна в застосунку або електронною поштою (<a href="#s11-uk">розділ 11</a>).</li>
+      </ul>
+    </div>
+
+    <h2 id="s1-uk">1. Хто ми</h2>
+    <p>Lever і Lever Coach (разом — «застосунки») випускає Mykhailo Stepanchuk («ми»), 4 Itskhaka Rabina St., Odesa 65076, Ukraine.</p>
+    <p>Ми — контролер даних: ми вирішуємо, навіщо і як використовуються дані, описані в цій політиці. Винятки: те, що тренер вносить про своїх клієнтів (<a href="#s10-uk">розділ 10</a>), і те, що Apple і Google обробляють за власними політиками (<a href="#s8-uk">розділ 8</a>).</p>
+    <p>З будь-якого питання щодо цієї політики пишіть: <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. Посадової особи із захисту даних ми не призначали; натомість пишіть на цю адресу.</p>
+    <p>Ми перебуваємо в Україні. До нас застосовується законодавство України про захист персональних даних, а також GDPR (Загальний регламент ЄС про захист даних) і GDPR Великої Британії (UK GDPR), бо застосунки пропонуються людям у ЄС і Великій Британії.</p>
+
+    <h2 id="s2-uk">2. Два застосунки і що ви мусите нам надати</h2>
+    <ul>
+      <li><strong>Lever</strong> — застосунок для тренувань. Він повністю працює без інтернету і без облікового запису. Вхід необов’язковий: він потрібен лише для резервної копії в хмарі, щоб відновити дані на іншому телефоні або щоб пов’язати обліковий запис із тренером.</li>
+      <li><strong>Lever Coach</strong> — застосунок для тренерів: розклад, бронювання, тренування, клієнти. Для нього потрібен обліковий запис.</li>
+    </ul>
+    <p>Один обліковий запис — або тренерський, або клієнтський, ніколи не обидва одночасно.</p>
+    <p>Ви ніколи не мусите давати нам більше, ніж потрібно для певної функції. Без облікового запису ви однаково можете тренуватися. Без відповідей про здоров’я Lever однаково складе програму, просто без урахування травм.</p>
+
+    <h2 id="s3-uk">3. Дані, які ми обробляємо</h2>
+
+    <h3>3.1 В обох застосунках</h3>
+    <p><strong>З обліковим записом і без нього:</strong> ваша IP-адреса, час і адреса кожного запиту потрапляють у журнали сервера нашого постачальника бази даних щоразу, коли застосунок звертається до нашого сервера. Коли ви вводите код тренера, ми також рахуємо спроби з кожної IP-адреси, щоб зупинити вгадування кодів.</p>
+    <p><strong>Якщо у вас є обліковий запис:</strong></p>
+    <ul>
+      <li><strong>Обліковий запис:</strong> адреса електронної пошти, ім’я та ваш ідентифікатор користувача Google або Apple. Вхід через Apple доступний лише на iOS. Apple може передати нам приховану адресу для пересилання замість справжньої, а ім’я передає лише під час першого входу. Google також передає посилання на фото вашого профілю.</li>
+      <li><strong>Роль:</strong> тренерський у вас обліковий запис чи клієнтський.</li>
+      <li><strong>Налаштування, що зберігаються з обліковим записом:</strong> мова, одиниці (кг або фунти), часовий пояс, за скільки часу до заняття нагадувати.</li>
+      <li><strong>Пристрої та сповіщення:</strong> випадковий ідентифікатор пристрою, платформа (iOS або Android), який це застосунок, токен push-сповіщень (ключ для доставки сповіщень на ваш телефон), коли пристрій востаннє виходив на зв’язок і які види сповіщень ви вимкнули. Для кожного сповіщення ми зберігаємо його тип, ім’я іншої людини, дату, час і назву тренування. Ніколи — ваги чи дані про тіло.</li>
+      <li><strong>Покупки:</strong> див. <a href="#s8-uk">розділ 8</a> (RevenueCat, App Store, Google Play). Ми ніколи не бачимо даних вашої картки чи платежу.</li>
+    </ul>
+
+    <h3 id="lever-uk">3.2 Lever<span class="tag">Lever</span></h3>
+    <p><strong>Без облікового запису.</strong> Ваші тренувальні дані залишаються на телефоні: відповіді анкети (досвід, розклад, мета), ваша програма, тренування, записи кожного підходу, налаштування і — лише за вашої згоди — відповіді про здоров’я (<a href="#s4-uk">розділ 4</a>). Ми їх не бачимо. Якщо видалити застосунок або очистити його сховище, вони зникнуть. Без облікового запису телефон залишають лише три речі: покупки надходять до RevenueCat з випадковим ідентифікатором (<a href="#s8-uk">розділ 8</a>); статистика використання (а на Android — і звіти про збої) (<a href="#s6-uk">розділ 6</a>); а коли ви вводите код тренера, наш сервер бачить вашу IP-адресу.</p>
+    <p><strong>Якщо ви ввійшли (необов’язково).</strong> До нашої хмарної бази даних копіюється таке, щоб ви могли відновити це на іншому телефоні:</p>
+    <ul>
+      <li>ваша програма тренувань і місце, де ви в ній зараз;</li>
+      <li>робочі ваги, які застосунок визначив для кожної вправи;</li>
+      <li>тренування, які ви склали самі;</li>
+      <li>записи завершених тренувань: вправи, підходи, повторення, ваги, час, відпочинок;</li>
+      <li>ваш профіль і відповіді анкети: ім’я користувача, стать, вік, вага тіла, зріст, мета, розклад, інвентар, досвід; а також ваша серія (тренування поспіль) і стан календаря;</li>
+      <li>відповіді про здоров’я — лише якщо ви дали окрему згоду з <a href="#s4-uk">розділу 4</a>;</li>
+    </ul>
+    <p>Тема, мова й одиниці зберігаються на кожному пристрої окремо. Незавершене тренування завантажується, коли ви його закінчите, або в реальному часі, поки тренер проводить те саме тренування разом із вами.</p>
+    <p><strong>Якщо ви пов’язані з тренером.</strong> Ваш тренер бачить тренувальні дані, як описано в <a href="#s9-uk">розділі 9</a>, а ми зберігаємо дані бронювань (запити, час, статус, ваші відповіді про відвідування) і лічильник «залишилось занять», який веде ваш тренер.</p>
+    <p><strong>Статистика використання і звіти про збої.</strong> Див. <a href="#s6-uk">розділ 6</a>.</p>
+    <p><strong>Сповіщення.</strong> Таймери й нагадування в Lever створюються на вашому телефоні. Якщо ви пов’язані з тренером, ми також надсилаємо push-сповіщення про бронювання, запитання про відвідування і призначені тренування. Ви керуєте ними через дозвіл на сповіщення на телефоні.</p>
+
+    <h3 id="coach-uk">3.3 Lever Coach<span class="tag">Lever Coach</span></h3>
+    <p>Обліковий запис обов’язковий. Крім даних із <a href="#s3-uk">розділу 3.1</a>, Lever Coach зберігає:</p>
+    <ul>
+      <li><strong>Налаштування тренера:</strong> часовий пояс, тривалість заняття, на скільки наперед клієнти можуть бронювати, крайній строк, до якого можна скасувати заняття, налаштування пізнього скасування.</li>
+      <li><strong>Розклад:</strong> робочі дні й години, перерви, вільні часові вікна.</li>
+      <li><strong>Клієнти та бронювання:</strong> хто з вами пов’язаний, статус зв’язку, коди-запрошення, які ви створюєте, бронювання (час, статус, хто скасував), відповіді клієнтів про відвідування.</li>
+      <li><strong>Залишилось занять:</strong> лічильник для кожного клієнта, який ведете ви, кожна його зміна (дата, хто, причина) і ваші особисті нотатки. Клієнт бачить лічильник, але ніколи — нотатки.</li>
+      <li><strong>Ціна заняття:</strong> необов’язкова ціна одного заняття в будь-якій валюті. Її бачите лише ви.</li>
+      <li><strong>Тренування і програми</strong>, які ви складаєте, нотатки до них (можуть містити посилання на відео), шаблони, призначення клієнтам (дати, статус) і ваги, які ви задаєте клієнтові.</li>
+      <li><strong>Тренувальні дані пов’язаних клієнтів</strong>, якими клієнти погодилися ділитися (<a href="#s9-uk">розділ 9</a>).</li>
+      <li><strong>Клієнти, додані вручну:</strong> ім’я та адреса електронної пошти, які ви вводите (<a href="#s10-uk">розділ 10</a>).</li>
+      <li><strong>Підписка:</strong> ваш тариф (кількість місць), дата, до якої він діє, і ваш ідентифікатор клієнта RevenueCat. Місце — це клієнт, якому за останні 30 днів призначено тренування або заброньовано заняття; ми рахуємо такі місця, щоб застосувати обмеження вашого тарифу.</li>
+    </ul>
+    <p>Lever Coach не ставить запитань про здоров’я і не показує реклами. Він надсилає статистику використання до Amplitude (<a href="#s6-uk">розділ 6</a>). У Lever Coach немає бібліотеки звітів про збої.</p>
+
+    <h2 id="s4-uk">4. Відповіді про здоров’я</h2>
+    <p>Цей розділ стосується лише Lever. Lever Coach не питає про здоров’я.</p>
+    <p><strong>Що.</strong> Відповіді про травми й медичні стани: біль у суглобах, хвороба серця, вагітність; а також будь-який біль, про який ви повідомляєте після тренування. За GDPR це дані «особливої категорії» (стаття 9).</p>
+    <p><strong>Навіщо.</strong> Лише щоб підлаштувати вашу програму: замінити вправи й знизити навантаження. Більше ні для чого.</p>
+    <p><strong>Як ми питаємо.</strong> Спершу Lever один раз показує повідомлення, що він не є медичною послугою. Потім ставить необов’язкове запитання: чи можна використовувати ваші відповіді про травми та медичні стани і про біль після тренування, щоб підлаштувати програму? Якщо ви відповідаєте «ні», ці відповіді видаляються, а програма складається без них. Якщо «так» — вони зберігаються. Правова підстава — ваша явна згода (стаття 6(1)(a) і стаття 9(2)(a) GDPR).</p>
+    <p><strong>Де вони зберігаються.</strong> На вашому телефоні, у приватному сховищі застосунку. До нашої хмарної бази даних (Supabase, Ірландія) вони потрапляють, лише якщо ви також увійшли в обліковий запис. У Lever для Android резервне копіювання даних застосунку вимкнено, тому у вашій резервній копії Google цих відповідей немає. На iPhone, якщо ви ввімкнули резервне копіювання в iCloud, дані застосунку, зокрема відповіді, є в цій копії; вона зберігається у вашому обліковому записі Apple, і ми не можемо її прочитати.</p>
+    <p><strong>Хто їх ніколи не отримує.</strong> Ваш тренер, Amplitude, Google Firebase, RevenueCat, Google і будь-хто інший. Два винятки: Supabase зберігає їх для нас, коли ви ввійшли в обліковий запис, а Apple зберігає вашу резервну копію iCloud, якщо ви її ввімкнули. Вони ніколи не входять до статистики використання чи звітів про збої і ніколи не використовуються для реклами чи будь-якої іншої мети.</p>
+    <p><strong>Відкликання згоди.</strong> Ви можете будь-коли вимкнути згоду щодо даних про здоров’я в налаштуваннях Lever. Відтоді Lever перестає використовувати ці відповіді. Уже збережені відповіді видаляються, коли ви видаляєте обліковий запис, або протягом 30 днів після вашого запиту на адресу <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. Без облікового запису їх видаляє очищення даних застосунку.</p>
+    <p><strong>Як довго.</strong> Доки ви не видалите обліковий запис або не попросите нас їх видалити. Без облікового запису — доки ви не очистите дані застосунку.</p>
+    <p>Якщо ви живете в США, також діє наша <a href="consumer-health-data.html">Consumer Health Data Privacy Policy</a> (англійською).</p>
+
+    <h2 id="s5-uk">5. Як Lever складає вашу програму</h2>
+    <p>Механізм, який складає програми в Lever, — це набір правил, які написали люди: лінійна прогресія, заплановані розвантажувальні тижні та поетапні переходи між варіантами вправ. Він використовує ваші відповіді анкети, записані підходи і — лише якщо ви дали згоду — ваші відповіді про здоров’я.</p>
+    <p>У Lever немає моделі машинного навчання і немає генеративного ШІ. Ваші дані не надсилаються до жодного сервісу ШІ і не використовуються для навчання жодних моделей. Механізм лише пропонує вправи й ваги; кожну пропозицію ви можете змінити. Він не ухвалює рішень, які мають для вас юридичні чи подібні за значущістю наслідки (стаття 22 GDPR).</p>
+    <p>У Lever Coach тренування і програми пише тренер.</p>
+
+    <h2 id="s6-uk">6. Статистика використання і звіти про збої</h2>
+    <p><strong>Які застосунки.</strong> Lever (Android та iOS) і Lever Coach (Android та iOS) надсилають статистику використання до Amplitude — у версіях, опублікованих у магазинах застосунків. Lever для Android також використовує Google Firebase Analytics для статистики використання і Firebase Crashlytics для звітів про збої. У Lever для iOS і в Lever Coach немає бібліотеки звітів про збої.</p>
+    <p><strong>Навіщо.</strong> Щоб бачити, якими екранами й функціями користуються, де люди зупиняються або натрапляють на помилки, скільки людей оформлюють і зберігають підписку і скільки тривають тренування, — і так виправляти й покращувати застосунки. Ніколи — для реклами; ніколи не передаємо рекламодавцям чи торговцям даними; ніколи не поєднуємо з даними інших компаній.</p>
+    <p><strong>Правова підстава.</strong> Наш законний інтерес (стаття 6(1)(f) GDPR): розуміти, якими екранами й функціями користуються, знаходити помилки й збої та покращувати застосунки. Перемикача для цього в застосунках немає. Ви можете заперечити будь-коли (стаття 21 GDPR): напишіть на <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>, і ми попросимо Amplitude і Google видалити все, що пов’язано з ідентифікатором вашого пристрою. Видалення застосунку також припиняє збирання.</p>
+    <p><strong>Що надходить до Amplitude:</strong></p>
+    <ul>
+      <li>події використання: які екрани ви відкриваєте і якими функціями користуєтеся, з кількістю та типами дій;</li>
+      <li>ідентифікатор пристрою. На iPhone це ідентифікатор Apple для постачальника (IDFV): він однаковий у Lever і Lever Coach на одному iPhone і не є рекламним ідентифікатором. На Android Amplitude створює випадковий ідентифікатор під час встановлення застосунку. Жоден із них не є ідентифікатором вашого облікового запису; ідентифікатор облікового запису ми до Amplitude не надсилаємо;</li>
+      <li>ваша IP-адреса. Amplitude визначає за нею вашу країну й місто і зберігає її разом із подіями; ваш мобільний оператор і виробник пристрою;</li>
+      <li>модель пристрою, версія операційної системи, версія застосунку, мова застосунку;</li>
+      <li>події покупок: ідентифікатор продукту, тариф і валюта; у Lever також ціна, яку ви сплатили, у Lever Coach — без сум;</li>
+      <li>лічильники тренувань: кількість підходів і тривалість заняття, без ваг.</li>
+    </ul>
+    <p><strong>Що надходить до Firebase (Lever для Android):</strong> такі самі події використання з даними про пристрій і застосунок та ідентифікатор екземпляра застосунку Firebase; у разі збою — що робив застосунок у момент збою, модель пристрою, версія операційної системи, версія застосунку та ідентифікатор встановлення Firebase. Firebase не отримує рекламного ідентифікатора вашого пристрою Android: його збирання в застосунку вимкнено.</p>
+    <p><strong>Що ніколи не надходить жодному з них:</strong> ваше ім’я, адреса електронної пошти, ідентифікатор облікового запису, ваги, виміри тіла, відповіді про здоров’я, довільний текст (нотатки, імена клієнтів) і будь-які дані клієнтів тренера.</p>
+    <p>Статистика не пов’язана з вашим обліковим записом: ми ніколи не надсилаємо ідентифікатор облікового запису, ім’я чи електронну пошту. Проте це все одно персональні дані, бо їх прив’язано до ідентифікатора пристрою та IP-адреси.</p>
+    <p><strong>Видалення.</strong> Оскільки статистика не пов’язана з вашим обліковим записом, видалення облікового запису її не видаляє. Щоб стерти її, напишіть нам і вкажіть ідентифікатор пристрою, якщо ви його знаєте; якщо ні — назвіть застосунок, модель телефону, мову застосунку і приблизно коли ви його встановили, і ми знайдемо відповідні записи та попросимо Amplitude і Google їх видалити.</p>
+    <p><strong>Як довго.</strong> Amplitude: доки ми їх не видалимо; Amplitude не видаляє їх автоматично. Firebase Analytics: 2 місяці. Firebase Crashlytics: 90 днів.</p>
+    <p><strong>Діагностика Apple.</strong> Якщо в налаштуваннях iPhone ви дозволили ділитися діагностикою з розробниками застосунків, Apple передає нам узагальнену статистику збоїв і використання відповідно до власної політики Apple.</p>
+
+    <h2 id="s7-uk">7. Навіщо ми використовуємо дані, на якій підставі і як довго</h2>
+    <p>Статті в таблиці — це статті GDPR. «Договір» означає, що дані потрібні, щоб надати вам застосунок (стаття 6(1)(b)).</p>
+    <div class="tbl">
+    <table>
+      <thead>
+        <tr><th>Мета</th><th>Дані</th><th>Правова підстава</th><th>Як довго</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Вхід і обліковий запис (обидва застосунки)</td><td>електронна пошта, ім’я, ідентифікатор користувача Google або Apple, посилання на фото профілю (Google), роль, налаштування облікового запису</td><td>Договір</td><td>Доки ви не видалите обліковий запис</td></tr>
+        <tr><td>Резервна копія і відновлення ваших тренувань (Lever, після входу)</td><td>програма, робочі ваги, власні тренування, записи тренувань, профіль і відповіді анкети, серія і календар</td><td>Договір</td><td>Доки ви не видалите обліковий запис</td></tr>
+        <tr><td>Підлаштування програми під травми і стан здоров’я (Lever)</td><td>відповіді про здоров’я, повідомлення про біль</td><td>Явна згода, стаття 6(1)(a) і стаття 9(2)(a)</td><td>Доки ви не видалите обліковий запис або не попросите нас їх видалити. Без облікового запису — доки ви не очистите дані застосунку</td></tr>
+        <tr><td>Робота з тренером (обидва застосунки)</td><td>статус зв’язку, коди-запрошення, бронювання, відповіді про відвідування, лічильник «залишилось занять», тренувальні дані, відкриті тренерові, підходи в реальному часі</td><td>Згода на передавання тренувальних даних, стаття 6(1)(a); договір — для бронювань</td><td>Відкриті тренувальні дані: доки ви не розірвете зв’язок або не видалите обліковий запис. Власні записи тренера про заняття: доки тренер не видалить клієнта, клієнт не видалить свій обліковий запис (<a href="#s11-uk">розділ 11</a>) або тренер не видалить тренерський обліковий запис</td></tr>
+        <tr><td>Робота тренера (Lever Coach)</td><td>розклад, налаштування тренера, тренування, програми, шаблони, призначення, особисті нотатки, ціни занять, клієнти, додані вручну</td><td>Договір із тренером, стаття 6(1)(b). Щодо того, що тренер пише про клієнтів, ми діємо як обробник тренера (<a href="#s10-uk">розділ 10</a>)</td><td>Доки тренер не видалить ці дані або свій обліковий запис</td></tr>
+        <tr><td>Показ вам запрошення тренера (клієнти, додані вручну)</td><td>ім’я та адреса електронної пошти, які тренер увів про вас</td><td>Законний інтерес, стаття 6(1)(f): дати вам змогу прийняти або відхилити запрошення тренера, коли ви входите з цією адресою електронної пошти</td><td>Доки тренер не видалить вас або тренерський обліковий запис</td></tr>
+        <tr><td>Нагадування і сповіщення (обидва застосунки)</td><td>ідентифікатор пристрою, платформа, push-токен, час останнього виходу на зв’язок, налаштування сповіщень, записи про сповіщення (тип, ім’я, дата, час, назва тренування)</td><td>Договір, стаття 6(1)(b): сповіщення про бронювання й тренування — частина послуги. Чи з’являтимуться вони, ви вирішуєте через дозвіл на сповіщення на телефоні</td><td>Push-токен: доки ви не вийдете з облікового запису на цьому пристрої, не видалите обліковий запис або служба доставки не повідомить, що токен недійсний. Записи про сповіщення: доки ви не видалите обліковий запис</td></tr>
+        <tr><td>Підписки (обидва застосунки)</td><td>Наш запис (Lever Coach): тариф, дата, до якої він діє, ідентифікатор клієнта RevenueCat. У RevenueCat: статус покупки, продукт, дані квитанції з магазину, ідентифікатор користувача застосунку (<a href="#s8-uk">розділ 8</a>)</td><td>Договір. Магазини застосунків ведуть власний податковий облік відповідно до закону</td><td>Наш запис (Lever Coach): доки ви не видалите обліковий запис. Lever: ми не ведемо запису; його зберігає RevenueCat. RevenueCat: доки ви не попросите нас видалити ваш запис. Apple і Google: за їхніми власними правилами</td></tr>
+        <tr><td>Статистика використання (обидва застосунки)</td><td><a href="#s6-uk">розділ 6</a></td><td>Законний інтерес, стаття 6(1)(f): розуміти, якими екранами й функціями користуються, знаходити помилки й покращувати застосунки. Ви можете заперечити (<a href="#s12-uk">розділ 12</a>)</td><td>Amplitude: доки ми їх не видалимо; Amplitude не видаляє їх автоматично. Firebase Analytics: 2 місяці</td></tr>
+        <tr><td>Звіти про збої (Lever для Android)</td><td><a href="#s6-uk">розділ 6</a></td><td>Законний інтерес, стаття 6(1)(f): знаходити й виправляти збої. Ви можете заперечити (<a href="#s12-uk">розділ 12</a>)</td><td>90 днів</td></tr>
+        <tr><td>Безпека і запобігання зловживанням (обидва застосунки)</td><td>IP-адреса, час і адреса кожного запиту в журналах сервера; кількість спроб введення коду тренера з кожної IP-адреси</td><td>Законний інтерес, стаття 6(1)(f): підтримувати роботу сервісу і зупиняти вгадування кодів тренера та перевантаження. Ви можете заперечити (<a href="#s12-uk">розділ 12</a>)</td><td>Журнали сервера: 1 день. Лічильники спроб введення коду: 1 день</td></tr>
+        <tr><td>Відповіді на ваші запити</td><td>ваше повідомлення, ваша адреса електронної пошти, що ми зробили</td><td>Відповідь: юридичний обов’язок, стаття 6(1)(c) і статті 12–22. Зберігання запису після цього: законний інтерес — мати змогу показати, як ми обробили ваш запит, стаття 6(1)(f)</td><td>12 місяців після закриття запиту</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Ми не використовуємо ваші дані для реклами, не продаємо їх і не використовуємо для рішень, що мають для вас юридичні наслідки.</p>
+
+    <h2 id="s8-uk">8. Хто обробляє дані для нас і де</h2>
+    <p>Supabase, Amplitude, RevenueCat і Google (щодо Firebase) обробляють дані від нашого імені за договорами, які зобов’язують їх захищати дані щонайменше так, як описано в цій політиці, і використовувати їх лише для послуги, яку вони нам надають. Apple і Google діють за власними політиками конфіденційності як незалежні контролери — щодо входу через ваш обліковий запис Apple або Google і щодо покупок.</p>
+    <ul>
+      <li><strong>Supabase, Inc.</strong> розміщує базу даних, вхід і оновлення в реальному часі. Усі дані облікових записів і застосунків із розділів <a href="#s3-uk">3</a>, <a href="#s4-uk">4</a>, <a href="#s9-uk">9</a> і <a href="#s10-uk">10</a> зберігаються в Ірландії (ЄС, AWS eu-west-1). Supabase — компанія зі США; будь-яку обробку за межами ЄС охоплюють стандартні договірні умови Європейської комісії в нашому договорі про обробку даних із Supabase.</li>
+      <li><strong>Google LLC</strong> (США) надає вхід через Google, Firebase Cloud Messaging (доставку push-сповіщень на Android та iOS: токен, тип сповіщення, імена, дата, час, назва тренування), а в Lever для Android — Firebase Analytics і Firebase Crashlytics (<a href="#s6-uk">розділ 6</a>). Google LLC сертифікована за EU-U.S. Data Privacy Framework і його розширенням для Великої Британії.</li>
+      <li><strong>Apple</strong> надає вхід через Apple, App Store і доставку push-сповіщень на iOS. Apple обробляє ці дані за власною політикою конфіденційності.</li>
+      <li><strong>Amplitude, Inc.</strong> (США) отримує статистику використання з усіх чотирьох застосунків (<a href="#s6-uk">розділ 6</a>). Amplitude сертифікована за EU-U.S. Data Privacy Framework і його розширенням для Великої Британії.</li>
+      <li><strong>RevenueCat, Inc.</strong> (США) керує підписками. Компанія отримує статус вашої покупки, продукт, дані квитанції з App Store або Google Play та ідентифікатор користувача застосунку. Якщо ви ввійшли, це ідентифікатор вашого облікового запису; інакше — випадковий ідентифікатор. Дані зберігаються в Amazon Web Services у США; передавання охоплюють стандартні договірні умови Європейської комісії та британський додаток про міжнародне передавання даних (UK International Data Transfer Addendum) у нашому договорі про обробку даних із RevenueCat.</li>
+      <li><strong>Google Play і App Store</strong> проводять платежі. Ми отримуємо лише статус вашої підписки, ніколи — дані вашої картки.</li>
+    </ul>
+    <p>Самі ми працюємо з України, щодо якої ЄС не ухвалював рішення про адекватність захисту даних. Дані й далі зберігаються в Ірландії; з України ми звертаємося до них лише для того, щоб підтримувати роботу сервісу, виправляти його і відповідати на ваші запити, і щодо такого доступу GDPR зобов’язує нас як контролера (стаття 3(2)).</p>
+    <p>Копію гарантій щодо передавання даних можна попросити за адресою <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. Для Великої Британії передавання ґрунтується на британському розширенні Data Privacy Framework або британському додатку до стандартних договірних умов. Якщо Data Privacy Framework перестане діяти, передавання до Google і Amplitude триватиме на підставі стандартних договірних умов у наших договорах із ними.</p>
+    <p>Крім постачальників, названих вище, і вашого тренера чи клієнта (<a href="#s9-uk">розділ 9</a>), ми розкриваємо дані іншим лише тоді, коли цього вимагає закон. Якщо ми колись продамо бізнес або об’єднаємо його з іншим, ця політика й далі діятиме щодо даних.</p>
+
+    <h2 id="s9-uk">9. Що бачить тренер і що бачить клієнт</h2>
+    <h3>9.1 Що тренер бачить про пов’язаного клієнта</h3>
+    <p>Лише після того, як клієнт натисне «Поділитися з тренером» на окремому екрані, де перелічено таке:</p>
+    <ul>
+      <li>ім’я клієнта (якщо в обліковому записі немає імені — частину адреси електронної пошти до @; для прихованих адрес Apple — ні);</li>
+      <li>тренування і програму;</li>
+      <li>кожне записане тренування: дату, тривалість, вправи, підходи, повторення, ваги, час відпочинку і рекорди;</li>
+      <li>бронювання, відвідування і відповіді про відвідування, лічильник «залишилось занять»;</li>
+      <li>коли тренер проводить тренування разом із клієнтом — підходи, які вводять обоє, у реальному часі.</li>
+    </ul>
+    <p>Тренер <strong>не</strong> бачить адреси електронної пошти клієнта (крім адреси клієнта, доданого вручну, яку ввів сам тренер), ваги тіла, зросту, віку, мети, відповідей про здоров’я і травми, повідомлень про біль, серій і нічого про інших тренерів.</p>
+    <h3>9.2 Що клієнт бачить про тренера</h3>
+    <ul>
+      <li>ім’я тренера, вільний час, власні бронювання клієнта і призначені тренування, лічильник «залишилось занять» і нагадування;</li>
+      <li>ніколи — ціни тренера, особисті нотатки чи інших клієнтів.</li>
+    </ul>
+    <h3>9.3 Як припинити</h3>
+    <p>Клієнт може розірвати зв’язок будь-коли (Lever: вкладка «Ви», картка тренера). Тренер теж може завершити зв’язок. Це діє одразу на нашому сервері: тренер більше не може читати жодних тренувальних даних цього клієнта. Майбутні заняття між ними скасовуються і не списуються з лічильника «залишилось занять». Тренування і призначення тренера зникають із Lever клієнта; клієнт зберігає власну історію. Щоб знову пов’язатися, потрібна нова згода на екрані згоди.</p>
+    <p>Після розірвання зв’язку в обліковому записі тренера залишаються його власні записи про заняття з цим клієнтом: дати, час, статус, лічильник «залишилось занять» та історія його змін, нотатки й ціни тренера. Доступу до тренувальних даних клієнта тренер не зберігає.</p>
+
+    <h2 id="s10-uk">10. Клієнти, додані вручну, і що вносять тренери</h2>
+    <p>Тренер може додати людину, яка ще не користується Lever, увівши ім’я та адресу електронної пошти. Ми зберігаємо їх в обліковому записі тренера і створюємо порожній запис-заготовку, через який неможливо ввійти. Ми не надсилаємо цій людині жодних повідомлень, push-сповіщень чи запитань про відвідування. Якщо згодом людина ввійде в Lever з підтвердженою адресою електронної пошти, яка збігається, Lever запропонує зв’язок на звичайному екрані згоди. Нічого не передається, доки людина не погодиться; після цього попередні заняття і лічильник «залишилось занять» переносяться до її облікового запису.</p>
+    <p><strong>Якщо вас додав тренер.</strong> Тренер може додати вас, увівши ваше ім’я та адресу електронної пошти. За це, а також за нотатки, ціни й лічильники занять, які тренер веде про вас, відповідає тренер (контролер), а ми зберігаємо ці дані лише за його вказівками (обробник, стаття 28 GDPR). Тренер отримав ці відомості від вас і має повідомити вам про них. Вашу адресу електронної пошти ми використовуємо для однієї власної мети: якщо ви ввійдете в Lever з цією підтвердженою адресою, ми запропонуємо вам зв’язок на екрані згоди (законний інтерес, стаття 6(1)(f): дати вам змогу прийняти або відхилити запрошення тренера). До того ми нічого вам не надсилаємо. Запис зберігається, доки тренер не видалить вас або свій обліковий запис. Щоб переглянути, виправити або видалити його, зверніться до тренера або напишіть нам на <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>; ми передамо запит тренерові й допоможемо його виконати.</p>
+
+    <h2 id="s11-uk">11. Видалення облікового запису і даних</h2>
+    <p>Ми зберігаємо дані облікового запису, доки він існує (точні строки — у <a href="#s7-uk">розділі 7</a>). Без облікового запису дані зберігаються лише на вашому телефоні.</p>
+    <p><strong>Видалення в застосунку.</strong> Lever: Налаштування, Видалити обліковий запис. Lever Coach: Профіль, Видалити обліковий запис. Є два екрани підтвердження: спершу — що буде видалено, потім — введення слова для підтвердження. Потрібне підключення до інтернету. Видалення остаточне, і ми не можемо його скасувати.</p>
+    <p><strong>Видалення без застосунку.</strong> Надішліть лист на <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a> з адреси електронної пошти вашого облікового запису, з темою «Видалити обліковий запис Lever» або «Видалити обліковий запис Lever Coach». Встановлювати застосунок знову не потрібно. Якщо ви пишете з іншої адреси, ми попросимо підтвердити, що обліковий запис ваш. Ми видаляємо обліковий запис і його дані протягом 30 днів і відповідаємо, коли все зроблено.</p>
+    <p><strong>Що видаляється:</strong> ваш профіль і запис про вхід, тренування, програми, записи тренувань і підходи, відповіді про здоров’я, налаштування, пристрої та push-токени, записи про сповіщення, бронювання і лічильники «залишилось занять» із тренерами чи клієнтами, а також сам зв’язок. Для тренера також: розклад, коди-запрошення, ціни занять, записи про клієнтів, доданих вручну, і наш запис про підписку. </p>
+    <p><strong>Наслідки для іншої людини.</strong> Якщо клієнт видаляє обліковий запис, тренер втрачає тренувальні дані цього клієнта, бронювання і лічильники «залишилось занять». Якщо тренер видаляє обліковий запис, клієнти зберігають власну історію тренувань, а тренування, призначення і бронювання тренера зникають з їхнього застосунку.</p>
+    <p><strong>Вхід через Apple.</strong> Коли ви видаляєте обліковий запис, створений через Apple, ми просимо Apple відкликати зв’язок із цим застосунком.</p>
+    <p><strong>Що ми не видаляємо:</strong></p>
+    <ul>
+      <li>записи про покупки і податкові записи, які Apple і Google зберігають за власними політиками і відповідно до закону. Ваш запис клієнта в RevenueCat: напишіть нам, і ми його видалимо;</li>
+      <li>статистику використання і звіти про збої, бо вони не пов’язані з вашим обліковим записом. Як їх видалити — <a href="#s6-uk">розділ 6</a>;</li>
+      <li>журнали сервера — до спливу строку, указаного в <a href="#s7-uk">розділу 7</a>. Резервних копій бази даних ми не робимо.</li>
+    </ul>
+
+    <h2 id="s12-uk">12. Ваші права</h2>
+    <p>Згідно з GDPR, UK GDPR і подібними законами ви маєте право:</p>
+    <ul>
+      <li>отримати копію своїх даних і відомості про те, як вони використовуються (доступ);</li>
+      <li>виправити їх (багато що можна змінити в застосунку; щодо решти напишіть нам);</li>
+      <li>видалити їх (<a href="#s11-uk">розділ 11</a>);</li>
+      <li>обмежити їх використання або заперечити проти нього там, де ми спираємося на законний інтерес (<a href="#s7-uk">розділ 7</a>), зокрема проти статистики використання і звітів про збої;</li>
+      <li>отримати свої дані в поширеному форматі файлу (переносність);</li>
+      <li>відкликати згоду будь-коли — це не вплине на те, що вже було зроблено: розірвати зв’язок із тренером, вимкнути згоду щодо даних про здоров’я або видалити обліковий запис.</li>
+    </ul>
+    <p>Ви можете будь-коли вимкнути сповіщення в налаштуваннях телефону.</p>
+    <p>Пишіть на <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. Ми відповідаємо протягом одного місяця. Якщо запит складний або запитів багато, ми можемо продовжити цей строк ще щонайбільше на два місяці; ми повідомимо вам про це протягом першого місяця і пояснимо причину. Якщо у вас є обліковий запис, ми попросимо підтвердити запит з його адреси електронної пошти, щоб ніхто інший не міг розпоряджатися вашими даними.</p>
+    <p>Ви також можете подати скаргу до органу із захисту даних країни, де ви живете або працюєте (у ЄС — наприклад, до італійського Garante per la protezione dei dati personali; у Великій Британії — до Information Commissioner's Office), а в Україні — до Уповноваженого Верховної Ради України з прав людини (<a href="https://ombudsman.gov.ua" rel="noopener">ombudsman.gov.ua</a>).</p>
+
+    <h2 id="s13-uk">13. Діти</h2>
+    <p>Застосунки призначені для людей віком від 16 років у всіх країнах. Ми свідомо не збираємо дані молодших осіб. Якщо ми дізнаємося, що обліковий запис має людина, молодша за 16 років, ми видаляємо цей обліковий запис і його дані протягом 7 днів. Якщо ви вважаєте, що дитина має обліковий запис, напишіть нам.</p>
+
+    <h2 id="s14-uk">14. Як захищено дані</h2>
+    <ul>
+      <li>Усі дані між застосунками та нашими серверами передаються зашифрованими з’єднаннями (HTTPS).</li>
+      <li>Наша база даних перевіряє кожен запит за правилами доступу (row level security). Обліковий запис може читати й змінювати власні дані; тренер також може читати те, чим клієнт вирішив поділитися; і тренер, і клієнт бачать бронювання між ними. Лише ми як адміністратори маємо доступ до всієї бази даних — щоб підтримувати роботу сервісу і виправляти його.</li>
+      <li>Дані на вашому телефоні зберігаються в приватному сховищі застосунку. У Lever для Android резервне копіювання даних застосунку вимкнено. Відповіді про здоров’я залишають телефон, лише якщо ви ввійдете в обліковий запис або, на iPhone, через вашу власну резервну копію iCloud (<a href="#s4-uk">розділ 4</a>).</li>
+      <li>Якщо станеться витік ваших даних, ми повідомимо наглядовий орган, коли цього вимагає закон, і повідомимо вас напряму, якщо витік, імовірно, створює для вас високий ризик.</li>
+    </ul>
+
+    <h2 id="s15-uk">15. Для жителів США</h2>
+    <p>Цей розділ доповнює решту цієї політики.</p>
+    <ul>
+      <li><strong>Do Not Track.</strong> У застосунках немає відстеження на сайтах і між сайтами, тож сигналам браузера «Do Not Track» чи Global Privacy Control нічого вимикати. Ми не реагуємо на ці сигнали.</li>
+      <li><strong>Відстеження третіми сторонами.</strong> Жодна третя сторона не збирає через наші застосунки персональну інформацію про ваші дії в інших застосунках чи на сайтах.</li>
+      <li><strong>Жодного продажу, жодного передавання для реклами.</strong> Ми не продаємо персональну інформацію і не передаємо її для поведінкової реклами між різними сайтами й застосунками, і не робили цього за останні 12 місяців. Ми не використовуємо ваші дані для цільової реклами.</li>
+      <li><strong>Невада.</strong> Жителі Невади можуть попросити нас не продавати їхню інформацію, на яку поширюється закон, написавши на <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. Ми її не продаємо у жодному разі.</li>
+      <li><strong>Виправлення і видалення даних.</strong> Змініть свої дані в застосунку або напишіть на <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a>. Видалення — як описано в <a href="#s11-uk">розділі 11</a>.</li>
+      <li><strong>Категорії і треті сторони.</strong> Категорії персональної інформації, яку ми збираємо, перелічено в <a href="#s3-uk">розділі 3</a>, а компанії, які її отримують, — у <a href="#s8-uk">розділі 8</a>.</li>
+      <li><strong>Дані про здоров’я.</strong> Відповідно до закону штату Вашингтон My Health My Data Act і закону штату Невада SB 370 діє наша окрема <a href="consumer-health-data.html">Consumer Health Data Privacy Policy</a> (англійською).</li>
+      <li><strong>Дата набрання чинності.</strong> Угорі цієї сторінки.</li>
+    </ul>
+
+    <h2 id="s16-uk">16. Зміни до цієї політики</h2>
+    <p>Якщо ми змінюємо те, як застосунки поводяться з даними, ми оновлюємо цю сторінку, її версію та дату до того, як зміна вийде. Якщо ми починаємо збирати новий вид даних, використовувати дані для нової мети або додаємо нового одержувача, ми повідомляємо вас про це в застосунку до того, як це почне діяти, і знову просимо вашої згоди, якщо зміна стосується відповідей про здоров’я. Попередні версії доступні на запит.</p>
+
+    <h2 id="s17-uk">17. Контакти</h2>
+    <p>Mykhailo Stepanchuk, 4 Itskhaka Rabina St., Odesa 65076, Ukraine, <a href="mailto:this.is.daily.staff@gmail.com">this.is.daily.staff@gmail.com</a></p>
+
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var titles = {
+    en: "Privacy Policy – Lever and Lever Coach",
+    uk: "Політика конфіденційності – Lever і Lever Coach"
+  };
+  var buttons = document.querySelectorAll(".switch button");
+
+  function goToAnchor() {
+    var h = location.hash.replace("#", "");
+    if (!h) return;
+    var base = h.replace(/-uk$/, "");
+    if (!document.getElementById(base)) return;
+    var lang = root.getAttribute("data-lang") === "uk" ? "uk" : "en";
+    var el = document.getElementById(lang === "uk" ? base + "-uk" : base);
+    if (el) el.scrollIntoView();
+  }
+
+  // The heading of the section currently at the top of the viewport, in the language shown now.
+  function currentSection(lang) {
+    var heads = document.querySelectorAll('.lang[lang="' + lang + '"] h2[id], .lang[lang="' + lang + '"] h3[id]');
+    var best = null;
+    for (var i = 0; i < heads.length; i++) {
+      if (heads[i].getBoundingClientRect().top <= 16) best = heads[i].id; else break;
+    }
+    return best;
+  }
+
+  function setLang(lang) {
+    var prev = root.getAttribute("data-lang");
+    var keep = prev && prev !== lang ? currentSection(prev) : null;
+    root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang);
+    document.title = titles[lang];
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].setAttribute("aria-pressed", buttons[i].getAttribute("data-set") === lang ? "true" : "false");
+    }
+    if (keep) {
+      var base = keep.replace(/-uk$/, "");
+      var el = document.getElementById(lang === "uk" ? base + "-uk" : base);
+      if (el) { el.scrollIntoView(); return; }
+    }
+    goToAnchor();
+  }
+
+  var h0 = location.hash.replace("#", "");
+  var initial = /-uk$/.test(h0) || /^uk/i.test(navigator.language || "") ? "uk" : "en";
+  setLang(initial);
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () { setLang(this.getAttribute("data-set")); });
+  }
+  window.addEventListener("hashchange", goToAnchor);
+})();
+</script>
 </body>
 </html>
